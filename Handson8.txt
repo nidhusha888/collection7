@@ -1,0 +1,92 @@
+package com.handsonn;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+public class Example1 {
+
+	public static void main(String[] args) {
+		List<Integer> matches =new ArrayList<>();
+		Scanner s=new Scanner(System.in);
+		System.out.println("Number of matches");
+		int i=s.nextInt();
+		System.out.println("Enter each match runs");
+		for(int j=0;j<i;j++) {
+			matches.add(s.nextInt());
+		}
+		int sum=0;
+		for(int j=0;j<i;j++) {
+			sum += matches.get(j);
+		}
+		System.out.println(sum);
+		float avg=(float)sum/i;
+		System.out.println(avg);
+
+	}
+
+}
+
+
+
+
+
+
+package com.handsonn;
+
+import java.util.Scanner;
+import java.util.TreeSet;
+
+public class Example2 {
+
+	public static void main(String[] args) {
+		TreeSet<Integer> runs=new TreeSet<>();
+		Scanner s=new Scanner(System.in);
+		System.out.println("Number of matches");
+		int n=s.nextInt();
+		System.out.println("Enter each match runs");
+		for(int i=0;i<n;i++) {
+			runs.add(s.nextInt());
+		}
+		System.out.println();
+		for(int r:runs) {
+			System.out.println(r);
+		}
+		
+
+	}
+
+}
+
+
+
+
+
+package com.handsonn;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Scanner;
+
+public class Example3 {
+
+	public static void main(String[] args) {
+		List<String> names=new ArrayList<>();
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Number of matches");
+		int n=sc.nextInt();
+		System.out.println("Stadium Name");
+		for(int i=0;i<=n;i++) {
+			names.add(sc.nextLine());
+		}
+		System.out.println("Enter the venue to fing frequency");
+		String venue=sc.nextLine();
+		int fre=Collections.frequency(names,venue);
+		System.out.println("count "+fre);
+		
+	}
+	
+}	
+	
